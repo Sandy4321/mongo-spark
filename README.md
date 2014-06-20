@@ -20,7 +20,7 @@ How to
 
 First of all thanks to [original repository](https://github.com/plaa/mongo-spark) and [blog post](http://codeforhire.com/2014/02/18/using-spark-with-mongodb/).
 This example provides instructions on how to run you application on [stadalone spark cluster running on ec2](http://spark.apache.org/docs/1.0.0/ec2-scripts.html).  
-1. Because by default ec2 scipt installs standalone spark cluster with **hadoop version 1.0.4** you should build you mongo-hadoop connector against this version of hadoop (here the prebuilded version is located at *lib/*). Please check [mongo-hadoop-conector repository](https://github.com/mongodb/mongo-hadoop) to learn how to build mongo-hadoop connector against your version of hadoop.
+1. Because by default ec2 scipt installs standalone spark cluster with **hadoop version 1.0.4** you should build you mongo-hadoop connector against this version of hadoop (here the prebuilded version is located at *lib/*). Please check [mongo-hadoop-conector repository](https://github.com/mongodb/mongo-hadoop) to learn how to build mongo-hadoop connector against your version of hadoop.  
 2. The strightforward way to run your application is to make "fat" jar using assembly sbt plugin:  
     **`sbt assembly`**  
 and pass it to [submit script](http://spark.apache.org/docs/latest/submitting-applications.html). Please review the **[build.sbt](https://github.com/dselivanov/mongo-spark/blob/master/build.sbt)** file and check **mergeStrategy** and **libraryDependencies**.  
