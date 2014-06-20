@@ -4,3 +4,27 @@ bin
 project/target
 project/project/target
 
+# Generic IDE- and binary excludes
+*.class
+.idea
+*.iml
+target
+*/target
+*/*/target
+*.pyc
+*.*~
+
+# Exclude logs
+log
+*.out
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Eclipse-specific excludes
+.classpath
+.project
+.settings
+.metadata
