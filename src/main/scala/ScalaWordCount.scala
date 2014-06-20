@@ -10,6 +10,7 @@
  */
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
+import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.hadoop.conf.Configuration
 import org.bson.BSONObject
 import org.bson.BasicBSONObject
@@ -17,18 +18,22 @@ import org.bson.BasicBSONObject
 object ScalaWordCount {
 
   def main(args: Array[String]) {
-
-    val sc = new SparkContext("local", "Scala Word Count")
-    
+    if (args.length < 4) {
+      System.err.println("Usage:  <mongo-host:port> <DB_NAME.INPUT_COLLECTION> <DB_NAME.OUTPUT_COLLECTION> <TEXT_FIELD_NAME_TO_COUNT_WORDS>")
+      System.err.println("Example: 127.0.0.1:27017 test.testData_in test.testData_out text")
+      System.exit(-1)
+    }
+    val sparkConf = new SparkConf()
+    val sc = new SparkContext(sparkConf)
     val config = new Configuration()
-    config.set("mongo.input.uri", "mongodb://127.0.0.1:27017/beowulf.input")
-    config.set("mongo.output.uri", "mongodb://127.0.0.1:27017/beowulf.output")
+    config.set("mongo.input.uri", "mongodb://" + args(0) + "/" + args(1))
+    config.set("mongo.output.uri", "mongodb://" + args(0) + "/" + args(2))
 
     val mongoRDD = sc.newAPIHadoopRDD(config, classOf[com.mongodb.hadoop.MongoInputFormat], classOf[Object], classOf[BSONObject])
 
     // Input contains tuples of (ObjectId, BSONObject)
     val countsRDD = mongoRDD.flatMap(arg => {
-      var str = arg._2.get("text").toString
+      var str = arg._2.get(args(4)).toString
       str = str.toLowerCase().replaceAll("[.,!?\n]", " ")
       str.split(" ")
     })

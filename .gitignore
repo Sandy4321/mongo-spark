@@ -1,8 +1,6 @@
 target
 lib_managed
 bin
-project/target
-project/project/target
 
 # Generic IDE- and binary excludes
 *.class
@@ -28,3 +26,7 @@ log
 .project
 .settings
 .metadata
+.cache
+
+# include libs
+!lib/*.jar
