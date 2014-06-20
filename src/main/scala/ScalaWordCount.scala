@@ -19,7 +19,7 @@ object ScalaWordCount {
 
   def main(args: Array[String]) {
     if (args.length < 4) {
-      System.err.println("Usage:  <mongo-host:port> <DB_NAME.INPUT_COLLECTION> <DB_NAME.OUTPUT_COLLECTION> <TEXT_FIELD_NAME_TO_COUNT_WORDS>")
+      System.err.println("Usage: <mongo-host:port> <DB_NAME.INPUT_COLLECTION> <DB_NAME.OUTPUT_COLLECTION> <TEXT_FIELD_NAME_TO_COUNT_WORDS>")
       System.err.println("Example: 127.0.0.1:27017 test.testData_in test.testData_out text")
       System.exit(-1)
     }
@@ -33,7 +33,7 @@ object ScalaWordCount {
 
     // Input contains tuples of (ObjectId, BSONObject)
     val countsRDD = mongoRDD.flatMap(arg => {
-      var str = arg._2.get(args(4)).toString
+      var str = arg._2.get(args(3)).toString
       str = str.toLowerCase().replaceAll("[.,!?\n]", " ")
       str.split(" ")
     })

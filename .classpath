@@ -5,7 +5,6 @@
   <classpathentry output="target/scala-2.10/test-classes" path="src/test/java" kind="src"></classpathentry>
   <classpathentry path="./lib/mongo-hadoop-core-1.2.1-SNAPSHOT-hadoop_1.0.jar" kind="lib"></classpathentry>
   <classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"></classpathentry>
-  <classpathentry path="./lib_managed/jars/org.apache.spark/spark-core_2.10/spark-core_2.10-1.0.0.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/jars/org.apache.hadoop/hadoop-client/hadoop-client-1.0.4.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/jars/org.apache.hadoop/hadoop-core/hadoop-core-1.0.4.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/jars/xmlenc/xmlenc/xmlenc-0.52.jar" kind="lib"></classpathentry>
@@ -18,12 +17,13 @@
   <classpathentry path="./lib_managed/jars/commons-digester/commons-digester/commons-digester-1.8.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/jars/commons-beanutils/commons-beanutils/commons-beanutils-1.7.0.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/jars/commons-beanutils/commons-beanutils-core/commons-beanutils-core-1.8.0.jar" kind="lib"></classpathentry>
-  <classpathentry path="./lib_managed/jars/commons-net/commons-net/commons-net-2.2.jar" kind="lib"></classpathentry>
+  <classpathentry path="./lib_managed/jars/oro/oro/oro-2.0.8.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/jars/commons-el/commons-el/commons-el-1.0.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/jars/hsqldb/hsqldb/hsqldb-1.8.0.10.jar" kind="lib"></classpathentry>
-  <classpathentry path="./lib_managed/jars/oro/oro/oro-2.0.8.jar" kind="lib"></classpathentry>
-  <classpathentry path="./lib_managed/jars/org.codehaus.jackson/jackson-mapper-asl/jackson-mapper-asl-1.8.8.jar" kind="lib"></classpathentry>
-  <classpathentry path="./lib_managed/jars/org.codehaus.jackson/jackson-core-asl/jackson-core-asl-1.8.8.jar" kind="lib"></classpathentry>
+  <classpathentry path="./lib_managed/jars/org.codehaus.jackson/jackson-mapper-asl/jackson-mapper-asl-1.0.1.jar" kind="lib"></classpathentry>
+  <classpathentry path="./lib_managed/jars/org.codehaus.jackson/jackson-core-asl/jackson-core-asl-1.0.1.jar" kind="lib"></classpathentry>
+  <classpathentry path="./lib_managed/jars/org.mongodb/mongo-java-driver/mongo-java-driver-2.12.2.jar" kind="lib"></classpathentry>
+  <classpathentry path="./lib_managed/jars/org.apache.spark/spark-core_2.10/spark-core_2.10-1.0.0.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/bundles/org.apache.curator/curator-recipes/curator-recipes-2.4.0.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/bundles/org.apache.curator/curator-framework/curator-framework-2.4.0.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/bundles/org.apache.curator/curator-client/curator-client-2.4.0.jar" kind="lib"></classpathentry>
@@ -60,6 +60,7 @@
   <classpathentry path="./lib_managed/jars/com.esotericsoftware.reflectasm/reflectasm/reflectasm-1.07-shaded.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/jars/com.esotericsoftware.minlog/minlog/minlog-1.2.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/jars/org.objenesis/objenesis/objenesis-1.2.jar" kind="lib"></classpathentry>
+  <classpathentry path="./lib_managed/jars/commons-net/commons-net/commons-net-2.2.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/bundles/org.spark-project.akka/akka-remote_2.10/akka-remote_2.10-2.2.3-shaded-protobuf.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/jars/org.spark-project.akka/akka-actor_2.10/akka-actor_2.10-2.2.3-shaded-protobuf.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/bundles/com.typesafe/config/config-1.0.2.jar" kind="lib"></classpathentry>
@@ -94,7 +95,6 @@
   <classpathentry path="./lib_managed/jars/net.sf.py4j/py4j/py4j-0.8.1.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/jars/net.java.dev.jets3t/jets3t/jets3t-0.7.1.jar" kind="lib"></classpathentry>
   <classpathentry path="./lib_managed/jars/commons-httpclient/commons-httpclient/commons-httpclient-3.1.jar" kind="lib"></classpathentry>
-  <classpathentry path="./lib_managed/jars/org.mongodb/mongo-java-driver/mongo-java-driver-2.12.2.jar" kind="lib"></classpathentry>
   <classpathentry path="org.eclipse.jdt.launching.JRE_CONTAINER" kind="con"></classpathentry>
   <classpathentry path="bin" kind="output"></classpathentry>
 </classpath>
