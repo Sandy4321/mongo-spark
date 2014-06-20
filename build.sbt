@@ -1,15 +1,25 @@
+import AssemblyKeys._
+
+assemblySettings
+
 name := "mongo-spark"
 
 version := "1.0"
 
-scalaVersion := "2.10.3"
+scalaVersion := "2.10.4"
 
-libraryDependencies += "org.apache.spark" %% "spark-core" % "0.9.0-incubating"
+libraryDependencies += 	"org.apache.spark" %% "spark-core" % "1.0.0"  % "provided"
 
-// Select which Hadoop version to use
-libraryDependencies += "org.apache.hadoop" % "hadoop-client" % "2.2.0"
+libraryDependencies += 	"org.apache.hadoop" % "hadoop-client" % "1.0.4"
 
-libraryDependencies += "org.mongodb" % "mongo-java-driver" % "2.11.4"
+libraryDependencies += 	"org.mongodb" % "mongo-java-driver" % "2.12.2"
+
+mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
+	{
+		case PathList("org", "apache", "commons", xs @ _*)         => MergeStrategy.first
+		case x => old(x)
+	} 
+}
 
 retrieveManaged := true
 
