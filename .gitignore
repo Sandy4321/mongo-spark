@@ -27,6 +27,7 @@ log
 .settings
 .metadata
 .cache
+.worksheet
 
 # include libs
 !lib/*.jar
